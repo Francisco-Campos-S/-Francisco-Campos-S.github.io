@@ -128,7 +128,7 @@ I'm passionate about creating innovative software solutions that enhance learnin
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/66ea105b-d29f-413a-a267-36c3629b311c" width="60" alt="Custom"><br>
-      <sub><b>Custom</b></sub>
+      <sub><b>Postman</b></sub>
     </td>
     <td align="center">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width="60" alt="Figma"><br>
