@@ -30,6 +30,12 @@ I'm passionate about creating innovative software solutions that enhance learnin
 ---
 
 ## 💻 Programming Languages  
+<style>
+  table, tr, td {
+    border: none !important;
+  }
+</style>
+
 <table>
   <tr>
     <td align="center">
