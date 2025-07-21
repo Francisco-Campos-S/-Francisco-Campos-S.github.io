@@ -112,6 +112,8 @@ I'm passionate about creating innovative software solutions that enhance learnin
 ---
 
 ## ⚙️ Tools  
+
+
 <table>
   <tr>
     <td align="center">
@@ -119,12 +121,7 @@ I'm passionate about creating innovative software solutions that enhance learnin
       <sub><b>Git</b></sub>
     </td>
     <td align="center">
-      <img 
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-        width="60" 
-        style="filter: invert(31%) sepia(64%) saturate(669%) hue-rotate(251deg) brightness(89%) contrast(89%);" 
-        alt="GitHub Morado"
-      ><br>
+      <img src="https://github.com/user-attachments/assets/27868d06-72b2-4981-b8d6-7ec650ae54e5" width="60" alt="GitHub Morado"><br>
       <sub><b>GitHub</b></sub>
     </td>
     <td align="center">
@@ -132,7 +129,7 @@ I'm passionate about creating innovative software solutions that enhance learnin
       <sub><b>VS Code</b></sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/66ea105b-d29f-413a-a267-36c3629b311c" width="60" alt="Custom"><br>
+      <img src="https://github.com/user-attachments/assets/66ea105b-d29f-413a-a267-36c3629b311c" width="60" alt="Postman"><br>
       <sub><b>Postman</b></sub>
     </td>
     <td align="center">
@@ -143,9 +140,10 @@ I'm passionate about creating innovative software solutions that enhance learnin
 </table>
 
 
+
 ---
 
-## 🐧 Conocimientos de Linux  
+## 🐧 Linux Knowledge
 <table>
   <tr>
     <td align="center">
