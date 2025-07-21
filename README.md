@@ -30,7 +30,7 @@ I'm passionate about creating innovative software solutions that enhance learnin
 ---
 
 ## 💻 Programming Languages  
-<table>
+<table cellspacing="0" cellpadding="0">
   <tr>
     <td align="center">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="60"><br>
@@ -53,17 +53,16 @@ I'm passionate about creating innovative software solutions that enhance learnin
       <sub><b>C++</b></sub>
     </td>
     <td align="center">
-      <a href="https://es.m.wikipedia.org/wiki/Archivo:LaTeX_logo.svg" target="_blank" rel="noopener noreferrer">
-        <img src="https://github.com/user-attachments/assets/d79d7dbe-a035-44ed-9e15-39827e275b3d" width="60" alt="LaTeX" />
-      </a><br>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" width="60"><br>
       <sub><b>LaTeX</b></sub>
     </td>
     <td align="center">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" width="60" alt="R"><br>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" width="60"><br>
       <sub><b>R</b></sub>
     </td>
   </tr>
 </table>
+
 
 
 ---
