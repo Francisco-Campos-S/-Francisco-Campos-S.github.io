@@ -119,7 +119,12 @@ I'm passionate about creating innovative software solutions that enhance learnin
       <sub><b>Git</b></sub>
     </td>
     <td align="center">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="60"><br>
+      <img 
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+        width="60" 
+        style="filter: invert(31%) sepia(64%) saturate(669%) hue-rotate(251deg) brightness(89%) contrast(89%);" 
+        alt="GitHub Morado"
+      ><br>
       <sub><b>GitHub</b></sub>
     </td>
     <td align="center">
@@ -136,6 +141,7 @@ I'm passionate about creating innovative software solutions that enhance learnin
     </td>
   </tr>
 </table>
+
 
 ---
 
