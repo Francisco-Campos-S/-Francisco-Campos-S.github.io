@@ -74,3 +74,30 @@
                 }, 100);
             });
         });
+
+        // Formulario de contacto
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Obtener datos del formulario
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                // Crear enlace mailto
+                const mailtoLink = `mailto:profesorfranciscocampos@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)}`;
+                
+                // Abrir cliente de correo
+                window.location.href = mailtoLink;
+                
+                // Mostrar mensaje de confirmación
+                alert('Se abrirá tu cliente de correo para enviar el mensaje.');
+                
+                // Limpiar formulario
+                this.reset();
+            });
+        }
