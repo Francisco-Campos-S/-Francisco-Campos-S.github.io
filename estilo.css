@@ -105,6 +105,34 @@
             color: var(--primary-color);
         }
 
+        /* Language Selector */
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-selector {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .language-selector:hover {
+            border-color: var(--primary-color);
+        }
+
+        .language-selector:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(26, 188, 156, 0.2);
+        }
+
         /* Main content layout */
         .main-content {
             display: flex;
@@ -588,6 +616,15 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+            }
+
+            .header-controls {
+                gap: 0.5rem;
+            }
+
+            .language-selector {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.6rem;
             }
 
             .skills-container {
