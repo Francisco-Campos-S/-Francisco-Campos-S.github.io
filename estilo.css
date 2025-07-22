@@ -18,9 +18,38 @@
             --text-color: #ecf0f1;
             --bg-color: #121212;
             --card-bg: #1e1e1e;
-            --nav-bg: rgba(30, 30, 30, 0.9);
+            --nav-bg: rgba(30, 30, 30, 0.95);
             --border-color: #333;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilos específicos adicionales para modo oscuro */
+        [data-theme="dark"] body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .profile-card,
+        [data-theme="dark"] .project-card,
+        [data-theme="dark"] .cert-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+        }
+
+        [data-theme="dark"] input,
+        [data-theme="dark"] textarea,
+        [data-theme="dark"] select {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border-color: var(--border-color);
+        }
+
+        [data-theme="dark"] table {
+            background-color: transparent;
+        }
+
+        [data-theme="dark"] section {
+            background-color: transparent;
         }
 
         /* Estilos base */
@@ -35,7 +64,12 @@
             color: var(--text-color);
             background-color: var(--bg-color);
             line-height: 1.6;
-            transition: var(--transition);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Transiciones suaves para todos los elementos principales */
+        body * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         a {
@@ -93,16 +127,41 @@
         }
 
         .theme-toggle {
-            background: none;
-            border: none;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
             color: var(--text-color);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: var(--transition);
+            padding: 0.6rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
         }
 
         .theme-toggle:hover {
-            color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .theme-toggle:active {
+            transform: scale(0.95);
+        }
+
+        /* Efecto especial para el botón en modo oscuro */
+        [data-theme="dark"] .theme-toggle {
+            background: var(--card-bg);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(26, 188, 156, 0.3);
+        }
+
+        [data-theme="dark"] .theme-toggle:hover {
+            box-shadow: 0 0 15px rgba(26, 188, 156, 0.5);
         }
 
         /* Language Selector */
@@ -525,6 +584,17 @@
             padding: 2rem 0;
             background-color: var(--card-bg);
             margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        [data-theme="dark"] footer {
+            background-color: var(--card-bg);
+            border-top-color: var(--border-color);
         }
 
         /* Certifications Section */

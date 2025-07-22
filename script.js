@@ -2,28 +2,68 @@
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
         
-        // Verificar preferencia del usuario
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', currentTheme);
-        
-        if (currentTheme === 'dark') {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        } else {
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        // Función para detectar preferencia del sistema
+        function getSystemPreference() {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
         
-        // Alternar tema
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            if (newTheme === 'dark') {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        // Verificar preferencia del usuario o del sistema
+        const savedTheme = localStorage.getItem('theme');
+        const currentTheme = savedTheme || getSystemPreference();
+        body.setAttribute('data-theme', currentTheme);
+        
+        // Función para actualizar el icono del tema
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+                themeToggle.setAttribute('title', 'Cambiar a modo claro');
+                themeToggle.setAttribute('aria-label', 'Cambiar a modo claro');
             } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                icon.className = 'fas fa-moon';
+                themeToggle.setAttribute('title', 'Cambiar a modo oscuro');
+                themeToggle.setAttribute('aria-label', 'Cambiar a modo oscuro');
+            }
+        }
+        
+        // Aplicar tema inicial
+        updateThemeIcon(currentTheme);
+        
+        // Alternar tema con animación suave
+        themeToggle.addEventListener('click', () => {
+            // Agregar efecto de rotación al botón
+            themeToggle.style.transform = 'rotate(180deg)';
+            
+            setTimeout(() => {
+                const currentTheme = body.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                // Aplicar tema con transición suave
+                body.style.transition = 'all 0.3s ease';
+                body.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                
+                // Actualizar icono
+                updateThemeIcon(newTheme);
+                
+                // Restaurar rotación del botón
+                themeToggle.style.transform = 'rotate(0deg)';
+                
+                // Remover transición después del cambio
+                setTimeout(() => {
+                    body.style.transition = '';
+                }, 300);
+                
+            }, 150);
+        });
+        
+        // Escuchar cambios en la preferencia del sistema
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            // Solo aplicar si no hay preferencia guardada
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                body.setAttribute('data-theme', newTheme);
+                updateThemeIcon(newTheme);
             }
         });
 
@@ -68,7 +108,8 @@
                 'project1-desc': 'Aplicación de IA desarrollada en Python usando OpenCV y TensorFlow para detectar y reconocer rostros en tiempo real. Implementa algoritmos de deep learning para clasificación facial.',
                 'project2-title': 'Chatbot Educativo Inteligente',
                 'project2-desc': 'Bot conversacional desarrollado con procesamiento de lenguaje natural para asistir estudiantes en consultas académicas. Integra API de OpenAI y base de datos educativa.',
-                'view-code': 'Ver Código'
+                'view-code': 'Ver Código',
+                'footer-text': '© 2025 Francisco Campos Sandi. Todos los derechos reservados.'
             },
             en: {
                 'logo': 'Portfolio',
@@ -109,7 +150,8 @@
                 'project1-desc': 'AI application developed in Python using OpenCV and TensorFlow to detect and recognize faces in real time. Implements deep learning algorithms for facial classification.',
                 'project2-title': 'Intelligent Educational Chatbot',
                 'project2-desc': 'Conversational bot developed with natural language processing to assist students with academic queries. Integrates OpenAI API and educational database.',
-                'view-code': 'View Code'
+                'view-code': 'View Code',
+                'footer-text': '© 2025 Francisco Campos Sandi. All rights reserved.'
             }
         };
 
